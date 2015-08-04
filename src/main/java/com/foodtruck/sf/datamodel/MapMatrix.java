@@ -31,10 +31,10 @@ public class MapMatrix
 	// a square of 100 meters by 100 meters.
 	private final double GRANULARITY_IN_METERS = 100;  
 	
-	// The distance in degrees represented by each column
+	// The distance in degrees represented by each row
 	private final double latStep;
 	
-	// The distance in degrees represented by each row
+	// The distance in degrees represented by each column
 	private final double longStep;
 	
 	// Minimum latitude value from our food truck list
