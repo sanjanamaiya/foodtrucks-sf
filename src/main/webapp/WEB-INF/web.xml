@@ -32,7 +32,7 @@
         </init-param>
         <init-param>
             <param-name>swagger.api.basepath</param-name>
-            <param-value>http://localhost:8080/foodtruckservice/v1</param-value>
+            <param-value>http://ec2-52-27-9-65.us-west-2.compute.amazonaws.com:8080/foodtruckservice/v1</param-value>
         </init-param>
         <load-on-startup>2</load-on-startup>
     </servlet>
