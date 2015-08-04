@@ -42,9 +42,9 @@ public class TruckService
 	@GET
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@ApiOperation(value = "Get all food trucks sorted by increasing distance from location", 
-    notes = "Returns all food trucks listed in the SF area",
-    response = Truck.class, 
-    responseContainer = "List")
+	notes = "Returns all food trucks listed in the SF area",
+	response = Truck.class, 
+	responseContainer = "List")
 	
 	public ArrayList<Truck> getTrucks() throws TruckServiceException
 	{
@@ -69,9 +69,9 @@ public class TruckService
 	@Path("/trucks/inrange")
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@ApiOperation(value = "Get trucks in a given range",
-    notes = "Specify latitude, longitude and range in miles", 
-    response = Truck.class, 
-    responseContainer = "List")
+    	notes = "Specify latitude, longitude and range in miles", 
+	 response = Truck.class, 
+	 responseContainer = "List")
 	
 	public ArrayList<Truck> getTrucksInRange(
 			 @ApiParam(value = "latitude of location", required = true) @QueryParam("lat") double latitude,
@@ -95,9 +95,9 @@ public class TruckService
 	@Path("/fooditems")
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	@ApiOperation(value = "Get all food items",
-    notes = "Get list of all food items served by SF food trucks", 
-    response = String.class, 
-    responseContainer = "List")
+    	notes = "Get list of all food items served by SF food trucks", 
+    	response = String.class, 
+    	responseContainer = "List")
 	
 	public ArrayList<String> getFoodTruckItems() throws TruckServiceException
 	{
@@ -117,8 +117,8 @@ public class TruckService
 	@Path("/fooditems/truck/{id}")
 	@Produces(MediaType.TEXT_PLAIN)
 	@ApiOperation(value = "Get all food items for a particular truck",
-    notes = "Specify the truck Id", 
-    response = String.class)
+    	notes = "Specify the truck Id", 
+    	response = String.class)
 	
 	public String getFoodItemsForTruck(
 			@ApiParam(value = "Id of truck", required = true) @PathParam("id") int id) 
@@ -142,9 +142,9 @@ public class TruckService
 	@Path("/fooditems/inrange")
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	@ApiOperation(value = "Get all food items in a given range",
-    notes = "Get list of all food items served by SF food trucks in a given range", 
-    response = String.class, 
-    responseContainer = "List")
+    	notes = "Get list of all food items served by SF food trucks in a given range", 
+    	response = String.class, 
+    	responseContainer = "List")
 	
 	public ArrayList<String> getFoodItemsInRange(
 			@ApiParam(value = "latitude of location", required = true) @QueryParam("lat") double latitude,
